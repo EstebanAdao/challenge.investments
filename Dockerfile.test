@@ -1,0 +1,8 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
+ENV ASPNETCORE_ENVIRONMENT Production
+COPY . /app
+WORKDIR /app
+COPY ./challenge.investments.tests.unit/*.csproj ./challenge.investments.tests.unit/
+COPY ./challenge.investments.tests.integration/*.csproj ./challenge.investments.tests.integration/
+RUN dotnet restore
+ENTRYPOINT ["dotnet", "test"]

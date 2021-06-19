@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-1",
+    "configuration" : "Debug",
+    "framework"     : "net5.0",
+    "self-contained" : false,
+    "application"    : "challengeinvestmentsapi",
+    "environment"    : "challengeinvestmentsapi-test",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-0777471e\";\"aws:ec2:vpc,Subnets\"=\"subnet-b57f78bb\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.2.1 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "challengeinvestmentsapi-test",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}
